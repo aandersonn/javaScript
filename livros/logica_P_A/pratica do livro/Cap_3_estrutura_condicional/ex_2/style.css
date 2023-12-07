@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: auto;
+    text-align: center;   
+}
+
+h1 {
+    margin-bottom: 20px;
+    border-bottom-style: inset;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+
+
+
+

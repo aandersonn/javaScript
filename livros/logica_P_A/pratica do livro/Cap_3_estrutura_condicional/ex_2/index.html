@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa cálculo de peso ideal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="imagem/balança.png" alt="imagem de balança" width="300px">
+    <h1>Programa calculo do peso ideal</h1>
+    <p>Nome: <input type="text" id="inNome"></p>
+    <p>Sexo: 
+        <input type="radio" name="sexo" id="rbMasculino">Masculino
+        <input type="radio" name="sexo" id="rbFeminina">Feminino
+    </p>
+    <p>Altura: <input type="text" id="inAltura"></p>
+    <p>
+        <input type="button" value="Calcular peso ideal" id="btCalculo" onclick="calcularPeso()">
+        <input type="button" value="Limpar campos" id="btLimpar" onclick="limparCampo()">
+    </p>
+    <p id="outPeso"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

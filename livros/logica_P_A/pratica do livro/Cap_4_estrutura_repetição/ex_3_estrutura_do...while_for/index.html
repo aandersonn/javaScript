@@ -1,0 +1,24 @@
+<script>
+    //solicita um número é repete enquanto envalido
+    do {
+        var num = Number(prompt("Número: "));
+        if(num == 0 || isNaN(num)) {
+            alert("Informe um número")
+        }
+    } while(num == 0 || isNaN(num))
+
+    //declara e inicializa variável que irá exibir pares
+    var pares = "Pares entre 1 e " + num + ": ";
+
+    //isola o primeiro par(para evitar a ultima vírgula)
+    if(num > 2) {
+        pares = pares + "2"
+    }
+
+    //laço para acular pares (inicia com 4, pois o 2 já foi atribuido)
+    for(var i = 4; i <= num; i = i + 2) {
+        pares = pares + ", " + i 
+    };
+
+    alert(pares)
+</script>
