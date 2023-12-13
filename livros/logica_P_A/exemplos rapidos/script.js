@@ -14,6 +14,10 @@ function teste(valor) {
         //cont = cont + 1
         cont++
 
+        if(valor % 2 == 1) {
+            continue
+        }
+
         if(cont > 200) {
             console.log("Não foi possível processar todos os dados");
             break
