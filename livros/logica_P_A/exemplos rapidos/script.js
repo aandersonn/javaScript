@@ -19,12 +19,8 @@ function exibirConta() {
     var descricao = inDescricao.value;
     var valor = Number(inValor.value);
 
-    if(descricao == "") {
-        alert("Informe a descrição da conta.")
-        inDescricao.focus()
-    }
 
-    if(valor == 0 || valor == "" || isNaN(valor)) {
+    if(valor == 0 || isNaN(valor)) {
         alert("informe o valor da conta.");
         inValor.value = "";
         inValor.focus()
@@ -33,6 +29,16 @@ function exibirConta() {
     numContas++;
     valorTotal = valorTotal + valor;
 
-    resposta = resposta + descricao + " - R$: " + valor
+    resposta = resposta + descricao + " - R$: " + valor.toFixed(2) + "\n";
+
+    outResposta.textContent = resposta + "----------------------------------";
+
+    outTotal.textContent = numContas + " Conta(s) - total R$: " + valorTotal.toFixed(2);
+
+    inDescricao.value = "";
+    inValor.value = "";
+    inDescricao.focus()
 }
+
+btExibir.addEventListener("click", exibirConta)
 
