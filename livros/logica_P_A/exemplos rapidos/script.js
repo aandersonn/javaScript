@@ -5,7 +5,7 @@
 //passar a ideia do código para o papel = @     
 //ler a explicação do livro = @
 
-function a() {
-    var numero = 1;
-    b
-}
+const css = 'background: tomato; color: white;';
+const mensagem = 'texto do console';
+
+console.log(`%c${mensagem}`, css)
