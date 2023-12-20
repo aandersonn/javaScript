@@ -5,7 +5,10 @@
 //passar a ideia do código para o papel = @     
 //ler a explicação do livro = @
 
-const css = 'background: tomato; color: white;';
-const mensagem = 'texto do console';
+const estrutura = {
+    pessoa: {
+        nome: 'Anderson'
+    }
+}
 
-console.log(`%c${mensagem}`, css)
+copy(estrutura)
