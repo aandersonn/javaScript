@@ -5,7 +5,7 @@
 //passar a ideia do código para o papel = @     
 //ler a explicação do livro = @
 
-var idade = []
-idade[0] = 18
-idade[1] = 19
-console.log(idade)
+var vazio = {};
+vazio.vazioSoQueNao = 1000
+console.log(vazio)
+
