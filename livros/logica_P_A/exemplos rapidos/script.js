@@ -5,7 +5,14 @@
 //passar a ideia do código para o papel = @     
 //ler a explicação do livro = @
 
-var vazio = {};
-vazio.vazioSoQueNao = 1000
-console.log(vazio)
+var cidades = ["Pelotas"];
+console.log(cidades);
+cidades.push("São lorenzo");
+console.log(cidades);
+cidades.unshift("Porto alegre");
+console.log(cidades);
+var retirada = cidades.pop();
+console.log(cidades)
+retirada = cidades.shift();
+console.log(cidades)
 
