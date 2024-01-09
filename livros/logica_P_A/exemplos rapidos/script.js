@@ -5,14 +5,6 @@
 //passar a ideia do código para o papel = @     
 //ler a explicação do livro = @
 
-var cidades = ["Pelotas"];
-console.log(cidades);
-cidades.push("São lorenzo");
-console.log(cidades);
-cidades.unshift("Porto alegre");
-console.log(cidades);
-var retirada = cidades.pop();
-console.log(cidades)
-retirada = cidades.shift();
-console.log(cidades)
+var cidades = ["Pelotas", "Porto alegre", "São lorenzo"]
+alert(cidades.toString( ) + "\n\n" + cidades.join(" - "))
 

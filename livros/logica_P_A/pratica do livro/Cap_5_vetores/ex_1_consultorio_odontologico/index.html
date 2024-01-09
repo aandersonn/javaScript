@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 do capítulo 5</title>
+    <style>
+        img {
+            width: 300px;
+            float: left;
+        }
+
+        form {
+            display: flex;
+        }
+
+        p {
+            margin-right: 5px;
+        }
+
+        .fonteAzul {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagem/ilustracao-dental-dentista-tratando-de-um-paciente_9829-30.avif" alt="ilustração sobre odontologia">
+    <h1>Consultório Odontológico</h1>
+    <hr>
+    <form action="">
+        <p>Paciente: <input type="text" id="inPaciente" autofocus></p>
+        <p><input type="button" value="Adicionar" id="btAdicionar"></p>
+        <p><input type="button" value="Urgência" id="btUrgencia"></p>
+        <p><input type="button" value="Atender" id="btAtender"></p>    
+    </form>
+    <hr>
+    <h3>Em atendimento: <span id="outAtendimento" class="fonteAzul"></span></h3>
+    <pre id="outLista"></pre>
+    
+    <script src="script.js"></script>
+</body>
+</html>
