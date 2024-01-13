@@ -24,18 +24,24 @@
     </style>
 </head>
 <body>
-    <img src="imagem/ilustracao-dental-dentista-tratando-de-um-paciente_9829-30.avif" alt="ilustração sobre odontologia">
-    <h1>Consultório Odontológico</h1>
-    <hr>
-    <form action="">
-        <p>Paciente: <input type="text" id="inPaciente" autofocus></p>
-        <p><input type="button" value="Adicionar" id="btAdicionar" onclick="adicionarPaciente()"></p>
-        <p><input type="button" value="Urgência" id="btUrgencia"></p>
-        <p><input type="button" value="Atender" id="btAtender"></p>    
-    </form>
-    <hr>
-    <h3>Em atendimento: <span id="outAtendimento" class="fonteAzul"></span></h3>
-    <pre id="outLista"></pre>
+    
+
+    <div class="conteiner">
+        <img src="imagem/ilustracao-dental-dentista-tratando-de-um-paciente_9829-30.avif" alt="ilustração sobre odontologia">
+        <h1>Consultório Odontológico</h1>
+        <div>
+            <label for="">Paciente</label>
+            <input type="text" id="inPaciente">
+        </div>
+        <div>
+            <input type="button" value="Consulta" id="btnConsulta">
+            <input type="button" value="Prioritário" id="btnPrioritario">
+            <input type="button" value="Atender" id="btnAtender">
+        </div>
+        <div>
+            <h3>Em atendimento: <span id="pacienteEmAtendimento"></span></h3>
+        </div>
+    </div>
     
     <script src="script.js"></script>
 </body>
