@@ -5,5 +5,8 @@
 //passar a ideia do código para o papel = @     
 //ler a explicação do livro = @
 
+var array = [5,6,8,3,6,9];
+alert()
+
 
 
