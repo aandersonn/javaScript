@@ -6,7 +6,9 @@
 //ler a explicação do livro = @
 
 var array = [5,6,8,3,6,9];
-alert()
+alert(array.indexOf(6));
+alert(array.lastIndexOf(6));
+alert(array.indexOf(7))
 
 
 
