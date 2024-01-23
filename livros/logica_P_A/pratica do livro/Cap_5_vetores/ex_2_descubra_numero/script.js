@@ -20,5 +20,38 @@ function apostarNumero {
         return
     }
 
-    
+    //Caso a pessoa acerte o número
+    if(numeroApostado == numeroGerado) {
+        alert("Parabéns você acertou o número!");
+        btnApostar.disabled = true;
+        btnJogarNovamente.className = 'exibe';
+        outDica.textContent = `O número sortteado foi: ${numeroGerado}`
+
+        //caso não acerte, terá duas opções: O número de chances acabar ou apostar em um número repetido
+    } else {
+        //Verifica se o número é repetido
+    } {
+        erros.push(numeroApostado);
+        let numeroDeErros = erros.length;
+        let chancesRestantes = numeroDeChances - numeroDeErros;
+
+        outErros.textContent = `${numeroDeErros} (${erros.join(', ')})`;
+        outChances.textContent = chancesRestantes;
+
+        if(chancesRestantes == 0) {
+            alert("Suas chances acabaram, reinicie o jogo para tentar novamente!");
+            btnApostar.disabled = true;
+            btnJogarNovamente.className = 'exibe';
+            outDica.textContent = `Game over !! Número sorteado ${numeroGerado}`
+
+            //Dá uma dica se o número é maior ou menor do que o apostado.
+        } else {
+            let dica = numeroApostado < numeroGerado ? 'Maior': 'Menor';
+            outDica.textContent = `Dica: tente um número ${dica} que o número ${numeroApostado}`;
+        }
+    }   
 }
+
+inNumero.value = "";
+inNumero.focus();
+
