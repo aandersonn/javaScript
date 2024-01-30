@@ -1,14 +1,15 @@
-//repetir a construção do código = 0/5
-//construir o código = @    
-//depuração de erros = @
-//verificar todas as etapas com o console.log = @    
-//passar a ideia do código para o papel = @     
-//ler a explicação do livro = @
+var idade = [12, 16, 15, 17, 14];
+var maiores = false;
+for(i = 0; i < idade.length; i++){
+    if(idade[i] >= 18) {
+        alert(idade[i]);
+        maiores = true
+    }
+}
 
-var array = [5,6,8,3,6,9];
-alert(array.indexOf(6));
-alert(array.lastIndexOf(6));
-alert(array.indexOf(7))
+if(!maiores) {
+    alert("Não há idades de maiores na lista")
+}
 
 
 
