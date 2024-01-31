@@ -13,6 +13,26 @@ h1 {
     margin: 15px 0 15px 0;
 }
 
-input {
+.primeiroBotao {
     margin: 15px 0 15px 0;
+}
+
+.segundoBotao {
+    margin-bottom: 15px;
+    
+}
+
+#btnAdicionar {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#btnListar {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#btnFiltrar {
+    padding: 5px;
+    margin-bottom: 15px;
 }

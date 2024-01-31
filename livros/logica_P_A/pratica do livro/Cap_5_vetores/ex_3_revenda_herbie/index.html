@@ -20,9 +20,10 @@
             <label for="">Preço R$:</label>
             <input type="text" id="inPreco">
         </div>
-        <input type="button" value="Adicionar Carro" id="btnAdicionar">
-        <input type="button" value="Listar Todos" id="btnListar">
+        <input type="button" value="Adicionar Carro" id="btnAdicionar" onclick="adicionarCarro()">
+        <input type="button" value="Listar Todos" id="btnListar" onclick="filtrarCarros()">
         <input type="button" value="Filtrar Por Preços" id="btnFiltrar">
+        <hr>
         <div>
             <pre id="outLista"></pre>
         </div>
