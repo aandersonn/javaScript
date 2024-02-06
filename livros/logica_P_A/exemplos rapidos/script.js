@@ -1,12 +1,13 @@
-var nomes = ["Pedro", "Ana", "João"];
+var numeros = [50, 100, 2]
 
-nomes.sort();
+numeros.sort()
 
-alert(nomes.join(", "));
+alert(numeros.join(", "))
 
-nomes.reverse();
+numeros.sort(function(a, b) {return a - b})
 
-alert(nomes.join(", "))
+alert(numeros.join(", "))
+
 
 
 
