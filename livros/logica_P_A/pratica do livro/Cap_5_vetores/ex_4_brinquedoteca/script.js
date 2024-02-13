@@ -76,5 +76,12 @@ function resumirIdade() {
         }
     }
 
-    resumo += `${menorIdade} ano(s) ${nome.length} crianças -`
+    resumo += `${menorIdade} ano(s) ${nome.length} crianças -`;
+    resumo += `${(nome.length / copia.length * 100).toFixed(2)} % \n`;
+    resumo += `(${nome.join(', ')}) \n\n`;
+
+    outLista.textContent = resumo
+
 }
+
+btnFiltrar.addEventListener("cliqk", resumirIdade)
