@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+img {
+    width: 500px;
+    margin: 20px 30px 0 20px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+#inNumero {
+    margin: 20px 0 10px 0;
+}
+
+#btnAdicionar {
+    margin: 0 5px 0 0;
+}

@@ -33,5 +33,29 @@ function listarClube() {
 
     let listaDeClubes = '';
 
-    for(let index = 0; index < todosClubes.length; index++)
+    for(let index = 0; index < todosClubes.length; index++) {
+        listaDeClubes += `${index + 1}. ${todosClubes[index]}\n`
+    }
+    outLista.textContent = listaDeClubes;
 }
+
+btnListar.addEventListener("click", listarClube);
+
+function mostrarTabela() {
+    let jogos = '';
+    let ultimoClube = todosClubes[todosClubes.length - 1];
+
+    if((todosClubes.length % 2) !== 0 || todosClubes.length == 0) {
+        alert('Adicione mais um clube para mostrar a tabela de jogos');
+        inClube.focus();
+        return
+    }
+
+    for(let index = 0; index < (todosClubes.length - 1) / 2; index++) {
+        jogos += `${todosClubes[index]} x ${ultimoClube - index}\n`
+    }
+
+    outLista.textContent = jogos
+}
+
+btnTabela.addEventListener("click", mostrarTabela)
