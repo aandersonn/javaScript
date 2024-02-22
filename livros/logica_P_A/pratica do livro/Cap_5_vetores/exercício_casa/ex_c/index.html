@@ -18,13 +18,15 @@
             <label for="">Nº de Acertos:</label>
             <input type="text" id="inAcerto">
         </div>
-        <input type="button" value="Adicionar" id="btnAdicionar">
-        <input type="button" value="Listar Todos" id="btnListar">
-        <input type="button" value="Aprovados" id="btnAprovados"> 
+        <input type="button" value="Adicionar" id="btnAdicionar" onclick="adicionar()">
+        <input type="button" value="Listar Todos" id="btnListar" onclick="listarTodos()">
+        <input type="button" value="Aprovados" id="btnAprovados" onclick="todosAprovados()"> 
 
         <div>
             <pre id="outAcertos"></pre>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
