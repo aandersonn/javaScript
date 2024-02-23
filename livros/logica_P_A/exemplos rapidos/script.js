@@ -1,13 +1,5 @@
-var numeros = [50, 100, 2]
-
-numeros.sort()
-
-alert(numeros.join(", "))
-
-numeros.sort(function(a, b) {return a - b})
-
-alert(numeros.join(", "))
-
-
-
+var cidade = "Pelota"
+console.log(cidade.charAt(0));
+console.log(cidade.charAt(1));
+console.log(cidade.charAt(2))
 
