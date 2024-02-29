@@ -3,7 +3,7 @@ let btnMontar = document.getElementById("btnMontar");
 let outDica = document.getElementById("outDica");
 
 function montarDica() {
-    const fruta = inFruta.value;
+    const fruta = inFruta.value.toUpperCase();
 
     if(fruta == "") {
         alert("Informe a fruta ...");
