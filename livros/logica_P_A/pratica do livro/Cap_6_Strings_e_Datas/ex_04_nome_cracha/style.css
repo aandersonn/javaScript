@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+img {
+    width: 500px;
+    margin: 30px 20px 0 30px;
+}
+
+.container {
+    margin-top: 120px;
+}
+
+#inParticipante {
+    margin: 20px 0 10px 0;
+}
