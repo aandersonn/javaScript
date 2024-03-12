@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+.container {
+    margin: 130px 0 0 30px;
+}
+
+#inFuncionario {
+    margin: 10px;
+}
