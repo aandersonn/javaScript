@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa Valida Senha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <img src="imagem/senha.jpg" alt="ilustração de senha">
@@ -13,7 +14,10 @@
             <label for="">Senha:</label>
             <input type="text" id="inSenha">
         </div>
-        <input type="button" value="Verificar validade da senha">
+        <input type="button" value="Verificar validade da senha" id="btnSenha" onclick="verificarSenha()">
+        <h3 id="outResposta"></h3>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
