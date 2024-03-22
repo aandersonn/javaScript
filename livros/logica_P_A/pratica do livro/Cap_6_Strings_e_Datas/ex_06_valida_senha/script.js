@@ -23,5 +23,15 @@ function verificarSenha() {
         erro.push("Possuir letras maiúsculas (no mínimo, 2)");
     }
 
-    
+    if(!senha.match(/[\W|_]/g)) {
+        erro.push("Possuir símbolos (No mínimo, 1");
+    }
+
+    if(erro.length == 0) {
+        outResposta.textContent = "Ok, Senha válida!"
+    } else {
+        outResposta.textContent = "Erro... A senha deve" + erro.join(",")
+    }
 }
+
+btnSenha.addEventListener("click", verificarSenha)
