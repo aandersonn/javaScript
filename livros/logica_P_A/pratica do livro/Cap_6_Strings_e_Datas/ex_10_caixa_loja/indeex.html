@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 9.10</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <img src="imagem/caixa de loja.jpg" alt="caixa de loja">
+    <div class="container">
+        <h1>Programa Caixa da Loja</h1>
+        <div>
+            <label for="">Data de Vencimento</label>
+            <input type="date" id="inDataVencimento" autofocus>
+        </div>
+        <div>
+            <label for="">Valor da Conta R$: </label>
+            <input type="text" id="inValor" class="aDireita" readonly>
+        </div>
+        <div>
+            <label for="">Valor da Multa</label>
+            <input type="text" id="inMulto" class="aDireita" readonly>
+        </div>
+        <div>
+            <label for="">Valor do Juros</label>
+            <input type="text" id="inJuros" class="aDireita" readonly>
+        </div>
+        <div>
+            <label for="">Total a Pagar</label>
+            <input type="text" id="inTotal" class="aDireita" readonly>
+            <input type="button" value="Nova Conta" id="btnNovaConta">
+        </div>
+    </div>
 </body>
 </html>

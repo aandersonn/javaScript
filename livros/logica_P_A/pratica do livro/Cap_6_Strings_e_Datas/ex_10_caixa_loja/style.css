@@ -1,0 +1,33 @@
+* {
+ margin: 0;
+ padding: 0;
+ width: 500px;
+}
+
+body {
+    display: flex;
+}
+
+img {
+    margin: 30px 20px 0 30px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#inDataVencimento {
+    margin: 10px 0 5px 0;
+}
+
+.aDireita {
+    margin: 5px;
+}
+
+#btnNovaconta {
+    margin: 5px;
+}
