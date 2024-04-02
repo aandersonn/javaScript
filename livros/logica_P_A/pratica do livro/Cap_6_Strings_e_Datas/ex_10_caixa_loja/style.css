@@ -31,3 +31,7 @@ h1 {
 #btnNovaconta {
     margin: 5px;
 }
+
+.container div {
+    display: flex;
+}
