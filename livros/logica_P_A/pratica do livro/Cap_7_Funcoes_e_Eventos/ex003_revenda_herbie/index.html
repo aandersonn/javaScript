@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 3 do capítulo 7</title>
+    <style>
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagem/poster-herbie-53-herbie.webp" alt="herbie-fusca">
+    <h1>Revenda Herbie - Consignados</h1>
+    <form action="">
+        <div>
+            <label for="">Modelo do veículo:</label>
+            <input type="text" id="inModelo">
+        </div>
+        <div>
+            <label for="">Ano de fabricação:</label>
+            <input type="text" id="inFabricacao">
+        </div>
+        <div>
+            <label for="">Preço Proprietário R$:</label>
+            <input type="text" id="inPropriedade">
+        </div>
+        <input type="button" value="Classificar/Calcular Preço" id="btCalcular" onclick="classificarCalcularPreco()">
+    </form>
+    <h3 id="outModelo"></h3>
+    <h3 id="outPreco"></h3>
+</body>
+</html>
