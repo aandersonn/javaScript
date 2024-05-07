@@ -22,4 +22,23 @@ function classificarCalcularPreco() {
     outPreco.textContent = "Preço de venda R$: " + precoVenda.toFixed(2)
 }
 
-btCalcular.addEventListener("click", classificarCalcularPreco)
+btCalcular.addEventListener("click", classificarCalcularPreco);
+
+function classificarVeiculo(fabricacao) {
+    let anoAtual = new Date().getFullYear();
+    let classif;
+
+    if(fabricacao == anoAtual) {
+        classif = "Novo"
+    } else if(fabricacao == anoAtual - 1 || fabricacao == anoAtual - 2) {
+        classif == "Seminovo";
+    } else {
+        classif = "Usado"
+    }
+    return classif;
+}
+
+function calcularVenda(valor, status) {
+    let prVenda = (status == "Novo") ? valor * 1.08 : valor * 1.10;
+    return prVenda;
+}
