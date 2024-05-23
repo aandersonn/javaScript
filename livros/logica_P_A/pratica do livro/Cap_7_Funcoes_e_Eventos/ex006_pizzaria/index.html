@@ -7,18 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Pizzaria Avenida - Controle de pedidos</h1>
     <img src="imagem/pizza.png" alt="imagem de uma pizza">
-    <form action="">
-        <label for="">Item do pedido: </label>
-        <input type="radio" name="pizza">
-        <label for="">Pizza</label>
-        <input type="radio" name="bebida">
-        <label for="">Bebida</label>
-
-        <label for="">Item: </label>
-        <input type="se">
-    </form>
+    
+    <div class="container">
+        <h1>Pizzaria Avenida - Controle de pedidos</h1>
+        <p>Item do pedido:
+            <input type="radio" name="produto" id="rbPizza" checked autofocus>
+            Pizza
+            <input type="radio" name="produto" id="rbBebida">Bedida
+            <span>Item: </span>
+            <select name="" id="inPizza">
+                <option value="media">Pizza média</option>
+                <option value="grande">Pizza grande</option>
+                <option value="familia">Pizza família</option>
+            </select>
+            <select name="" id="inBebida" class="oculta">
+                <option value="refri">Refrigerante litro</option>
+                <option value="suco">Jarra de suco</option>
+                <option value="agua">Água mineral</option>
+            </select>
+        </p>
+        <p>Detalhes do item:
+            <input type="text" id="inDetalhes" class="detalhes">
+            <input type="text" value="Adicionar" id="btAdicionar">
+        </p>
+        <pre id="outPedido"></pre>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
