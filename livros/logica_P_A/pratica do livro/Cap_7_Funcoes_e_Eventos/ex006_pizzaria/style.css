@@ -16,9 +16,13 @@ img {
 }
 
 h1 {
-    
+    margin-bottom: 30px;
 }
 
 .oculta {
     display: none;
+}
+
+#rbPizza, #rbBebida, span {
+    margin: 0 0 15px 10px;
 }

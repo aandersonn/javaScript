@@ -12,11 +12,11 @@
     <div class="container">
         <h1>Pizzaria Avenida - Controle de pedidos</h1>
         <p>Item do pedido:
-            <input type="radio" name="produto" id="rbPizza" checked autofocus>
+            <input type="radio" name="produto" id="rbPizza" checked autofocus onchange="trocarItem()">
             Pizza
-            <input type="radio" name="produto" id="rbBebida">Bedida
+            <input type="radio" name="produto" id="rbBebida" onchange="trocarItem()">Bedida
             <span>Item: </span>
-            <select name="" id="inPizza">
+            <select name="" id="inPizza" class="exibe">
                 <option value="media">Pizza média</option>
                 <option value="grande">Pizza grande</option>
                 <option value="familia">Pizza família</option>
@@ -28,8 +28,8 @@
             </select>
         </p>
         <p>Detalhes do item:
-            <input type="text" id="inDetalhes" class="detalhes">
-            <input type="text" value="Adicionar" id="btAdicionar">
+            <input type="text" id="inDetalhes" class="detalhes" onfocus="mostrarNumSabores()">
+            <input type="button" value="Adicionar" id="btAdicionar">
         </p>
         <pre id="outPedido"></pre>
     </div>
