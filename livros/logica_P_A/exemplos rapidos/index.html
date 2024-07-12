@@ -5,43 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo rápidos</title>
-    <style>
-        #area {
-            font: normal 15pt arial;
-            background-color: rgb(88, 194, 88);
-            color: white;
-            width: 200px;
-            height: 200px;
-            line-height: 200px;
-            text-align: center;
-        }
-    </style>
+   
 </head>
 <body>
-    <div id="area">
-        Interaja...
-    </div>
-    <script>
-        var a = window.document.getElementById('area');
-        a.addEventListener("click", clicar);
-        a.addEventListener("mouseenter", entrar);
-        a.addEventListener("mouseout", sair)
-
-        function clicar() {
-            
-            a.innerText = "Clicou";
-            a.style.background = "red"
-        }
-
-        function entrar() {
-            a.innerText = "Entrou"
-        }
-
-        function sair() {
-            a.innerText = "Sair";
-            a.style.background = "green"
-        }
-    </script>
+    
+   <h1>Salvando dados no navegador</h1>
+   <label for="">Informe o dado</label>
+   <input type="button" name="button" id=""> 
     <script src="script.js"></script>
 </body>
 </html>
