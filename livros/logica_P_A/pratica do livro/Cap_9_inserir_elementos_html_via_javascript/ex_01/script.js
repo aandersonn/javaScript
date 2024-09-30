@@ -51,3 +51,53 @@ function selecionarTarefa() {
 var btSelecionar = document.getElementById("btSelecionar");
 btSelecionar.addEventListener("click", selecionarTarefa)
 
+function retirarSelecionada() {
+    //Cria referência que irá "perder" um filho
+    var divQuadro = document.getElementById("divQuadro");
+    var h5 = document.getElementsByTagName("h5"); //Obtém tags h5 da página
+    var numH5 = h5.length; //Obtém contidade de h5
+    var aux = -1; //variável auxiliar para indicar linha selecionada
+
+    //Percorre a lista de elementos h5 inseridos na página
+    for (var i = 0; i < numH5; i++) {
+        //Verifica className da tag h5
+        if (h5[i].className == "tarefaSelecionada") {
+            //se selecionada aux = i
+            aux = i //muda valor da variável aux
+            break //sai da repetição
+        }
+    }
+
+    //se não há tarefa selecionada (ou se lista vazia...)
+    if (aux == -1) {
+        alert("Selecione uma tarefa para removêla...")
+        return
+    }
+
+    //Solicita confirmação (exibindo um conteúdo da tag h5 selecionada)
+    if (confirm("Confirma a exclusão de '" + h5[aux].textContent + "'?")) {
+        divQuadro.removeChild(h5[aux]); //remove um dos filhos de divQuadros
+    } 
+
+}
+var btRetirar = document.getElementById("btRetirar");
+btRetirar.addEventListener("click", retirarSelecionada)
+
+function gravarTarefas() {
+    var h5 = document.getElementsByTagName("h5"); //obtém tags h5 da página
+    var numH5 = h5.length; //obtém quantidade de h5
+
+    if(numH5 == 0) // se zero...
+    {
+        alert("Não há tarefas para serem salvas"); //exibe alerta
+        return; //retorna
+    }
+
+    var tarefas = ""; //irá "acumular" as tarefas
+
+     //percorre a lista de elementos h5 inseridos na página
+
+     for (var i = 0; i < numH5; i++) {
+        taferas  += h6[]]
+     }
+}
