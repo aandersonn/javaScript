@@ -98,6 +98,33 @@ function gravarTarefas() {
      //percorre a lista de elementos h5 inseridos na página
 
      for (var i = 0; i < numH5; i++) {
-        taferas  += h6[]]
+        tarefas  += h5[i].textContent + ";"; //acumula conteúdo de cada h5;
+     }
+     //grava as tarefas em localStorage, removendo o ultimo ";"
+     localStorage.setItem("tarefasDia", tarefas.substr(0, tarefas.length - 1));
+     //confere-se os dados que foram armazenados  em localStorage
+     if(localStorage.getItem("tarefasDia")) {
+        alert("ok! tarefas salvas.")
      }
 }
+var btGravar = document.getElementById("btGravar");
+btGravar.addEventListener("click", gravarTarefas)
+
+function recuperarTarefasSalvas() {
+    //Verifica se há tarefas salvas no navegador do usuário
+    if(localStorage.getItem("tarefasDia")) {
+        //cria um vetor com a lista de tarefas(separadas pelo split ";")
+        var tarefas = localStorage.getItem("tarefasDia").slice(";");
+        //cria referência ao divQuadro (local onde as tags h5 serão inseridas)
+        var divQuadro = document.getElementById("divQuadro")
+        //percorre todas as tarefas
+        for (var i = 0; i < tarefas.length; i++) {
+            var h5 = document.createElement("h5"); //cria um elemento html h5
+            var texto = document.createTextNode(tarefas[i]); //cria um texto
+            h5.appendChild(texto); //define que o texto será filho de h5
+            divQuadro.appendChild(h5); // ...e que o h5 será filho de divQuadro
+        }
+    }
+}
+
+recuperarTarefasSalvas()
