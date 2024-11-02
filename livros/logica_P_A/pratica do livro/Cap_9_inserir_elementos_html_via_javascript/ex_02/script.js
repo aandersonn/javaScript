@@ -29,6 +29,53 @@ function criarMoedas(num, pai, moeda, textoAlt, classe) {
     //cria laço de repetição para inserir várias imagens de moedas na página
     for(var i = 1; i <= num; i++) {
         var novaMoeda = document.createElement("img"); //cria elemento img
-        novaMoeda.src = "img/" + 
+        novaMoeda.src = "img/" + moeda; //atributo src
+        novaMoeda.textoAlt = textoAlt; //texto alternativo
+        novaMoeda.className = classe; //classe da moeda(css)
+        pai.appendChild(novaMoeda); //hierarquia DOM
     }
+    var br = document.createElement("br"); //cria uma quebra de linha br(br)
+    pai.appendChild(br)
 } 
+
+function conferirSoma() {
+    //Cria referência ao campo de entrada e obtém o seu conteúdo
+    var inSoma = document.getElementById("inSoma");
+    var soma = Number(inSoma.value)
+
+    //valida o preenchimento do campo
+    if(soma == 0 || isNaN(soma)) {
+        alert("Informe o valor da soma (Use ponto para separar valores decimais)")
+        inSoma.focus();
+        return
+    }
+
+    //Captura DivMoedas que é o local onde as moedas foram inseridas 
+    var divMoedas = document.getElementById("divMoedas");
+    //Captura as tags img filhas de divMoedas
+    var moedas = divMoedas.getElementsByTagName("img");
+    var totalMoedas = 0; //declara e inicializa acumulador
+
+    //Percorre as tags img e verifica propriedade className
+    for (var i = 0; i < moedas.length; i++) {
+        if(moedas[i].className == "moeda1_00") {
+            totalMoedas += 1; //acumula 1 (para moedas de 1)
+        } else if (moedas[i].className == "moeda0_50") {
+            totalMoedas += 0.50; //acumula 0.50 (para moedas 0.50)
+        } else if (moedas[i].className == "moeda0_25") {
+            totalMoedas += 0.25; //acumula 0.25 (para moedas 0.25)
+        } else {
+            totalMoedas += 0.10; //acumula 0.10 (para moedas 0.10)
+        }
+    }
+    var div = document.createElement("div")//cria elemento div
+    var h3 = document.createElement("h3")//cria elemento h3
+
+    if(soma == totalMoedas.toFixed(2)) {
+        div.className = "alert alert-success"; //define a classe da div
+        var mensagem = "Parabéns!! vocÇe acertou!"//e mensagem a ser exibida
+    } else {
+        div.className = "alert alert-danger";
+        var mensagem = "ops... a resposta correta é " + 
+    }
+}
