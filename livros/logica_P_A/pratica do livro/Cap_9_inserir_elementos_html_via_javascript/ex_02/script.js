@@ -15,7 +15,7 @@ function exibirMoedas() {
     var alt0_10 = "Moedas de dez centavos";
 
     //Chama o método criar moedas passando os argumentos 
-    criarMoedas(num1_00, divMoedas, "1_00.jpg", alt1_00, "moeda1_00");
+    criarMoedas(num1_00, divMoedas, "imagem/moeda_1.png", alt1_00, "imagem/moeda_1.png");
     criarMoedas(num0_50, divMoedas, "0_50.jpg", alt0_50, "moeda0_50");
     criarMoedas(num0_25, divMoedas, "0_25.jpg", alt0_25, "moeda0_25");
     criarMoedas(num0_10, divMoedas, "0_10.jpg", alt0_10, "moeda0_10");
@@ -58,7 +58,7 @@ function conferirSoma() {
 
     //Percorre as tags img e verifica propriedade className
     for (var i = 0; i < moedas.length; i++) {
-        if(moedas[i].className == "moeda1_00") {
+        if(moedas[i].className == "imagem/moeda_1.png") {
             totalMoedas += 1; //acumula 1 (para moedas de 1)
         } else if (moedas[i].className == "moeda0_50") {
             totalMoedas += 0.50; //acumula 0.50 (para moedas 0.50)
@@ -76,6 +76,15 @@ function conferirSoma() {
         var mensagem = "Parabéns!! vocÇe acertou!"//e mensagem a ser exibida
     } else {
         div.className = "alert alert-danger";
-        var mensagem = "ops... a resposta correta é " + 
+        var mensagem = "ops... a resposta correta é " + totalMoedas.toFixed(2)
     }
+    var texto = document.createTextNode(mensagem) //cria elemento de texto
+
+    h3.appendChild(texto) // Texto é filho de h3
+    div.appendChild(h3) //h3 é filho da div criada na function
+    divMoedas.appendChild(div); //desabilita botáo (resposta ja foi exibida)
+    
 }
+
+var btConferir = document.getElementById("btConferir");
+btConferir.addEventListener("click", conferirSoma)
