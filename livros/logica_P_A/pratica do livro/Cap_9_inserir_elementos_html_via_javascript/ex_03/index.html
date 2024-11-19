@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="imagem/cinema.jpg" alt="imagem de cinema" class="imgProg">
+            </div>
+            <div class="col-sm-8">
+                <h1>Meus filmes favoritos</h1>
+                <p>
+                    <label for="inTitulo">Título do filme</label>
+                    <input type="text" class="form-control" id="inTitulo">
+                </p>
+                <p>
+                    <label for="inGenero">Gênero</label>
+                    <input type="text" class="form-control" id="inGenero">
+                </p>
+                <p class="aDireita">
+                    <input type="button" value="Adicionar" class="btn btn-primary" id="btAdicionar">
+                </p>
+                <table class="table table-striped" id="tbFilmes">
+                    <tr>
+                        <th>Título do filme</th>
+                        <th>Gênero</th>
+                        <th>
+                            <label for=""><input type="checkbox" id="ckTodos"> Todos </label>
+                        </th>
+                    </tr>
+                </table>
+                <p class="aDireita">
+                    <input type="button" class="btn btn-danger" value="Excluir selecionados" id="btExcluir">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
