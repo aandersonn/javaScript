@@ -25,13 +25,44 @@ function adicionarFilme() {
     inGenero.value = "";
     inTitulo.focus()//posiciona o cursor em inTitulo
 
-    console.log(inTitulo, inGenero, titulo, genero, tbFilme)
 }
 var btAdicionar = document.getElementById("btAdicionar");
 btAdicionar.addEventListener("click", adicionarFilme)
 
-adicionarFilme()
+
 
 function inserirLinha(tabela, titulo, genero) {
+    var linha = tabela.insertRow(-1)//Adiciona uma linha na tabela
+    var col1 = linha.insertCell(0)//cria colunas na LINHa inserida 
+    var col2 = linha.insertCell(1)
+    var col3 = linha.insertCell(2)
 
+    col1.textContent = titulo; //Joga o conteúdo em cada celula
+    col2.textContent = genero;
+    col3.innerHTML = <input type='checkbox'></input> //innerHTML renderiza código 
+}
+
+function gravarFilme(titulo, genero) {
+    //Se há filmes salvos em localStprage...
+    if(localStorage.getItem("filmesTitulo")) {
+        //Obtem os dados e acrecenta ";" e o título/gênero informado
+        var filmesTitulo = localStorage.getItem("filmesTitulo") + ";" + titulo;
+        var filmesGenero = localStorage.getItem("filmesGenero") + ";" + genero;
+
+        localStorage.setItem("filmesTitulo", filmesTitulo);//grava dados
+        localStorage.setItem("filmesGenero", filmesGenero);//em localStorage
+    } else {
+        //senão, é a primeira inclusão (salva sem delimitador)
+        localStorage.setItem("filmesTitulo", titulo);
+        localStorage.setItem("filmesGenero", genero)
+    }
+}
+
+function recuperarFilmes() {
+    //se houver dados salvos em localStorage
+    if(localStorage.getItem("filmesTitulo")) {
+        //Obtém conteúdo e converte em elementos de vetor (na ocorrência ";")
+        var titulos = localStorage.getItem("filmesTitulo").split(";");
+        var generos = localStorage.getItem()
+    }
 }
