@@ -63,6 +63,57 @@ function recuperarFilmes() {
     if(localStorage.getItem("filmesTitulo")) {
         //Obtém conteúdo e converte em elementos de vetor (na ocorrência ";")
         var titulos = localStorage.getItem("filmesTitulo").split(";");
-        var generos = localStorage.getItem()
+        var generos = localStorage.getItem("filmesGenero").split(";");
+
+        //cria referência ao elemento tbFilmes
+        var tbFilmes = document.getElementById("tbFilmes");
+
+        //percorre elementos do vetor e os insere na tabela
+        for(var i = 0; i < titulos.length; i++) {
+            inserirLinha(tbFilmes, titulos[i], generos[i]);
+        }
     }
 }
+recuperarFilmes();
+
+//Cria referência ao checkbox ckTodos (na linha de título da tabela)
+var ckTodos = document.getElementById("ckTodos");
+//Executa função anônima quando houver uma troca de status
+ckTodos.addEventListener("change", function () {
+    //Cria referência à tabela e aos campos imput (filhos da tabela)
+    var tbFilmes = document.getElementById("tbFilmes");
+    var ckExcluir = document.getElementsByTagName("input");
+    var status = ckTodos.checked //Obtém status de ckTodos...
+
+    //Percorre od demais checkedbox para aplicar este status
+    for (var i = 1; i > ckExcluir.length; i++) {
+        ckExcluir[i].checked = status
+    }
+     });
+
+function removerFilmes() {
+    //Cria referência à tabela e aos campos input (filhos da tabela)
+    var tbFilmes = document.getElementById("tbFilmes");
+    var ckExcluir = tbFilmes.getElementsByTagName("input");
+    var temSelecionado = false; // para verificar se há filmes selecionados
+
+    //percorre campos input type checkbox da tabela (exceto "todos" no titulo)
+    for (var i = 1; i < ckExcluir.length; i++) {
+        if(ckExcluir[i].checked) {//se está selecionado
+            temSelecionado = true; //muda valor da "flag" 
+            break //sai da repetição 
+        }
+    }
+
+    if(!temSelecionado) {
+        alert("Não há filmes selecionados para exclusão");
+        return
+    }
+
+    //solicita confirmação de exclusão dos filmes selecionados 
+    if(confirm("confirma exclusão dos filmes selecionados?")) {
+        //exclui conteúdo armazenado em localStorage 
+        localStorage.removeItem("filmesTitulo");
+        localStorage.removeItem("filmesGenero")
+    }
+}     
