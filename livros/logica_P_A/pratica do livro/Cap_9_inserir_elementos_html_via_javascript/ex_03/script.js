@@ -114,6 +114,26 @@ function removerFilmes() {
     if(confirm("confirma exclusão dos filmes selecionados?")) {
         //exclui conteúdo armazenado em localStorage 
         localStorage.removeItem("filmesTitulo");
-        localStorage.removeItem("filmesGenero")
+        localStorage.removeItem("filmesGenero");
+
+        //Primeiro irá gravar em localStorage os filmes não selecionados
+        for(i = 1; i < ckExcluir.length; i++) {
+            //Se não está selecionado (para exclusão)
+            if(!ckExcluir[i].checked) {
+                //Obtém o conteúdo da tabela (coluna 0: título; coluna 1: gênero)
+                var titulo = tbFilmes.rows[i].cells[0].textContent;
+                var genero = tbFilmes.rows[i].cells[1].textContent;
+                gravarFilme(titulo, genero); //chama gravarFilme com dados da tabela
+            }
+        } 
+        //Agora irá remover as linhas selecionadas (do fim para o início)
+        for (i = ckExcluir.length -1; i > 0; i--) {
+            if(ckExcluir[i].checked) {
+                tbFilmes.deleteRow(i); //remove a linha
+            }
+        }
+        ckExcluir[0].checked = false; //desmarca ckTodos (que é o input 0)
     }
 }     
+var btExcluir = document.getElementById("btExcluir");
+btExcluir.addEventListener("click", removerFilmes)
