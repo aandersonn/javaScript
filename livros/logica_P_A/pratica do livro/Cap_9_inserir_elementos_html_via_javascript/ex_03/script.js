@@ -32,14 +32,14 @@ btAdicionar.addEventListener("click", adicionarFilme)
 
 
 function inserirLinha(tabela, titulo, genero) {
-    var linha = tabela.insertRow(-1)//Adiciona uma linha na tabela
-    var col1 = linha.insertCell(0)//cria colunas na LINHa inserida 
-    var col2 = linha.insertCell(1)
-    var col3 = linha.insertCell(2)
+    var linha = tabela.insertRow(-1) //Adiciona uma linha na tabela
+    var col1 = linha.insertCell(0); //cria colunas na LINHa inserida 
+    var col2 = linha.insertCell(1);
+    var col3 = linha.insertCell(2);
 
     col1.textContent = titulo; //Joga o conteúdo em cada celula
     col2.textContent = genero;
-    col3.innerHTML = <input type='checkbox'></input> //innerHTML renderiza código 
+    col3.innerHTML = "<input type='checkbox'>" //innerHTML renderiza código 
 }
 
 function gravarFilme(titulo, genero) {
