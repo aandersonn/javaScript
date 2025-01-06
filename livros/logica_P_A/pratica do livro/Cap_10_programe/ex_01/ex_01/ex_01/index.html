@@ -4,8 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jockey club</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="imagem/jockey_club.jpg" alt="jockey_club" class="imgProg">
+            </div>
+            <div class="col-sm-8">
+                <h1>Jockey Club - Controle de apostas</h1>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>
+                            <label for="inCavalo">Nº Cavalo: </label>
+                            <input type="text" class="formControl aDireita" id="inCavalo" autofocus>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <h5 id="outCavalo"></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>
+                            <label for="inAposta">Aposta R$:</label>
+                            <input type="text" class="formControl aDireita" id="inValor">
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="button" class="btn btn-primary margemSup" value="Apostar" id="btApostar">
+                        <input type="button" class="btn btn-success margemSup" value="Ganhador" id="btGanhador">
+                        <input type="button" class="btn btn-danger margemSup" value="Novo Páreo" id="btNovo">
+                    </div>
+                </div>
+                <pre id="outApostas"></pre>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
