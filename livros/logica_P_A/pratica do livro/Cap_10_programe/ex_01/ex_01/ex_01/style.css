@@ -43,5 +43,41 @@ img.poltrona {
 }
 
 .margemSup {
-    
+    margin-top: 30px;    
+}
+
+.margemEsq {
+    margin-left: 15px;
+}
+
+.oculta {
+    display: none;
+}
+
+.exibe {
+    display: inline;
+}
+
+.margemJogo {
+    margin-top: 15px;
+}
+
+.corFundo {
+    background-color: lightskyblue;
+}
+
+.entreLetras {
+    letter-spacing: 0.5em;
+}
+
+.margemDica {
+    padding: 12px;
+}
+
+.fonteAzul {
+    color: blue;
+}
+
+.fonteVermelho {
+    color: red;
 }
